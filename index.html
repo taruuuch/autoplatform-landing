@@ -4,27 +4,33 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&amp;subset=cyrillic-ext">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
-	<link rel="stylesheet" href="css/main.css">
-	<title>Аренда автовышек по всей Украине</title>
+	<link rel="stylesheet" href="css/main.min.css">
+	<title>Аренда автовышек по всей Украине - SkyBronto.com</title>
 </head>
 <body>
-	<header class="header">
+	<header id="header" class="header">
 		<div class="container">
 			<div class="header__logotype">
 				<a href="/">
 					<object data="img/logo.png" type="image/png" class="header__logotype-image"></object>
 				</a>
 			</div>
-			<nav role="navigation" class="header__navigation">
-				<a href="#" class="header__navigation-link">Аренда</a>
-				<a href="#" class="header__navigation-link">О нас</a>
-				<a href="#" class="header__navigation-link">Виды</a>
-				<a href="#" class="header__navigation-link">Какую выбрать?</a>
-				<a href="#" class="header__navigation-link">Контакты</a>
+			<nav id="navigation" role="navigation" class="header__navigation">
+				<a href="#info" class="header__navigation-link">Аренда</a>
+				<a href="#about" class="header__navigation-link">О нас</a>
+				<a href="#platforms" class="header__navigation-link">Виды</a>
+				<a href="#review" class="header__navigation-link">Отзывы</a>
+				<a href="#which" class="header__navigation-link">Какую выбрать?</a>
+				<a href="#contacts" class="header__navigation-link">Контакты</a>
 			</nav>
+			<div id="header__collapse" class="header__button">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
 		</div>
 	</header>
 	<main id="main">
@@ -35,9 +41,9 @@
 					<p class="info__description-text">Аренда автовышек с профессиональными операторами по всей Украине.</p>
 				</div>
 				<div class="info__request">
-					<form class="info__form">
-						<input type="text" name="name" id="name" placeholder="Ваше имя" class="input">
-						<input type="text" name="phone" id="phone" placeholder="+38 (___) ___-__-__" class="input">
+					<form id="infoForm" class="info__form">
+						<input type="text" name="name" id="name" placeholder="Ваше имя" class="input" required>
+						<input type="text" name="phone" id="phone" placeholder="+38 (___) ___-__-__" class="input" required>
 						<div class="info__form-button">
 							<button type="submit" class="btn">Заказать</button>
 						</div>
@@ -45,7 +51,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="about container">
+		<section id="about" class="about container">
 			<div class="about__container">
 				<div class="about__container-icon">
 					<object data="img/auto.svg" type="image/svg+xml" class="about__icon-image"></object>
@@ -56,7 +62,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="platforms container">
+		<section id="platforms" class="platforms container">
 			<div class="platforms__list">
 				<div class="platforms__list-item">
 					<div class="photo" style="background-image: url('img/type20.jpg');">
@@ -190,16 +196,46 @@
 				</div>
 			</div>
 		</section>
-		<section class="review">
+		<section id="review" class="review">
 			<div class="container">
 				<div class="review__list">
-					<div class="review__list-item">1</div>
-					<div class="review__list-item">2</div>
-					<div class="review__list-item">3</div>
+					<div class="review__list-item">
+						<div class="inner">
+							<div class="photo">
+								<img src="img/no-photo.jpg" alt="">
+							</div>
+							<div class="description">
+								<div class="fullname">Беляков Павел</div>
+								<div class="text">Заказывал маленькую автовышку в центр Киева, приехала аккуратная, ухоженная, с нормальным водителем, приятно с такими работать.</div>
+							</div>
+						</div>
+					</div>
+					<div class="review__list-item">
+						<div class="inner">
+							<div class="photo">
+								<img src="img/no-photo.jpg" alt="">
+							</div>
+							<div class="description">
+								<div class="fullname">Захарченко Борис</div>
+								<div class="text">Брал в долгосрочную аренду 50 метровую автовышку, получил приятную скидку, хороший оператор, буду брать в аренду по возможности другие автовышки.</div>
+							</div>
+						</div>
+					</div>
+					<div class="review__list-item">
+						<div class="inner">
+							<div class="photo">
+								<img src="img/no-photo.jpg" alt="">
+							</div>
+							<div class="description">
+								<div class="fullname">Пилипейко Святослав</div>
+								<div class="text">Нужно срочно была вышка, предоставили ёё в течении часа, за хорошую цену, спасибо ребятам, выручили, советую другим.</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
-		<section class="which container">
+		<section id="which" class="which container">
 			<div class="which__info">
 				<h2>Какую автовышку выбрать?</h2>
 				<p>Все зависит от таких параметров:</p>
@@ -225,7 +261,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="contacts container">
+		<section id="contacts" class="contacts container">
 			<h2>Наши контакты</h2>
 			<div class="contacts__list">
 				<div class="contacts__list-item">
@@ -241,7 +277,7 @@
 						<object data="img/phone.svg" type="image/svg+xml" class="contacts__icon-image"></object>
 					</div>
 					<div class="contacts__text">
-						<span class="contacts__text-name">Олег</span class="name"> - <a href="tel:0675020444" target="_blank">(067) 502-04-44
+						<span class="contacts__text-name">Олег</span> - <a href="tel:0675020444" target="_blank">(067) 502-04-44</a>
 					</div>
 				</div>
 				<div class="contacts__list-item">
@@ -272,10 +308,10 @@
 		</section>
 		<section id="request-modal" class="modal request-modal">
 			<div id="request-modal__container" class="modal__container">
-				<form class="modal__container-form">
-					<input type="text" name="name" id="modal-name" placeholder="Ваше имя" class="input" autofocus>
-					<input type="text" name="phone" id="modal-phone" placeholder="+38 (___) ___-__-__" class="input">
-					<textarea name="description" id="modal-description" class="textarea"></textarea>
+				<form id="requestModal" class="modal__container-form">
+					<input type="text" name="name" id="modal-name" placeholder="Ваше имя" class="input" autofocus required>
+					<input type="text" name="phone" id="modal-phone" placeholder="+38 (___) ___-__-__" class="input" required>
+					<textarea name="description" id="modal-description" class="textarea" required></textarea>
 					<div class="info__form-button">
 						<button type="submit" class="btn">Заказать</button>
 					</div>
@@ -287,6 +323,6 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/5.2.1/imask.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-	<script src="js/app.js"></script>
+	<script src="js/app.min.js"></script>
 </body>
 </html>
