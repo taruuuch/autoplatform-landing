@@ -114,6 +114,11 @@ a:hover {
 	transition: background ease .3s;
 }
 
+.btn:hover,
+.btn:focus {
+	outline: none;
+}
+
 .btn:disabled {
   background: #2d3032;
 }
@@ -300,6 +305,7 @@ a:hover {
 		"photo"
 		"description"
 		"price"
+		"schema"
 		"lease";
 	-ms-grid-rows: 200px auto auto auto;
 	grid-template-rows: 200px auto auto auto;
@@ -383,7 +389,7 @@ a:hover {
 }
 
 .platforms__list-item .lease {
-	-ms-grid-row: 4;
+	-ms-grid-row: 5;
 	-ms-grid-column: 1;
 	grid-area: lease;
 	margin: 1rem;
@@ -394,6 +400,22 @@ a:hover {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	align-self: flex-end;
+}
+
+.platforms__list-item .schema {
+	-ms-grid-row: 4;
+	-ms-grid-column: 1;
+	grid-area: schema;
+	margin: .5rem;
+	text-align: center;
+}
+
+.platforms__list-item__link {
+	color: var(--link-hover) !important;
+}
+
+.platforms__list-item__link:hover {
+	color: #c74a3a !important;
 }
 
 .review {
