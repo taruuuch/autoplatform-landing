@@ -1048,8 +1048,8 @@ a:hover {
 		    -ms-flex: 0 calc(100% / 2 - 15px);
 		        flex: 0 calc(100% / 2 - 15px);
 		width: calc(100% / 2 - 15px);
-		margin-right: 0px;
-		margin-left: 0px;
+		margin-right: 0px !important;
+		margin-left: 0px !important;
 	}
 
 	.platforms__list-item:nth-child(2n+1) {
