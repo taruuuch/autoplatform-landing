@@ -10,7 +10,7 @@ if (filter_var($to, FILTER_VALIDATE_EMAIL)) {
 
 	require_once "SendMailSmtpClass.php";
 
-	$mailSMTP = new SendMailSmtpClass("skybronto", "Pogrib150896", "ssl://smtp.gmail.com", "no-reply@skybronto.com", 465);
+	$mailSMTP = new SendMailSmtpClass("skybronto", "SET PASSWORD", "ssl://smtp.gmail.com", "no-reply@skybronto.com", 465);
 
 	$headers = "MIME-Version: 1.0\r\n";
 	$headers .= "Content-type: text/html; charset=utf-8\r\n";
