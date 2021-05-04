@@ -110,22 +110,20 @@ const formSend = () => {
 			event.stopImmediatePropagation();
 
 			const formData = new FormData();
-			let btnSubmit;
 
 			formData.append('name', event.target.name.value);
 			formData.append('phone', event.target.phone.value);
 
 			if (event.target.description) {
-				formData.append('phone', event.target.phone.value);
-				btnSubmit = event.target[3];
-			} else {
-				btnSubmit = event.target[2];
+				formData.append('description', event.target.description.value);
 			}
+
+			const btnSubmit = event.target.querySelector('button[type="submit"]')
 
 			btnSubmit.setAttribute('disabled', 'disabled');
 			sendMail(formData, btnSubmit);
 
-			this.reset();
+			form.reset();
 		};
 	});
 
